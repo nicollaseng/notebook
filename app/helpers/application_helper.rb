@@ -32,4 +32,7 @@ module ApplicationHelper
 		options_for_select(ESTADOS_BRASILEIROS,selected)
 	end
 
+	def options_for_phones
+	end
+
 end

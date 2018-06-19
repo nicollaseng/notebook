@@ -16,6 +16,14 @@
     <%= form.text_field :name %>
   </div>
 
+  <div>
+      <%= form.fields_for :address do |address_fields| %>
+      Street  : <%= address_fields.text_field :street %>
+      City: <%= address_fields.text_field :city %>
+      State: <%= address_fields.text_field :state %>
+    <% end %>
+  </div>
+
   <div class="field">
     <%= form.label :email %>
     <%= form.text_field :email %>

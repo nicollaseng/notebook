@@ -6,7 +6,6 @@ class ContactsController < ApplicationController
   # GET /contacts.json
   def index
     @contacts = Contact.all
-    @meunome = 'Nicollas'
   end
 
   # GET /contacts/1
@@ -17,6 +16,7 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   def new
     @contact = Contact.new
+    @contact.build_address
   end
 
   # GET /contacts/1/edit
@@ -75,6 +75,6 @@ class ContactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:name, :email, :kind_id, :rmk)
+      params.require(:contact).permit(:name, :email, :kind_id, :rmk, :address_attributes => [:street, :city, :state])
     end
 end

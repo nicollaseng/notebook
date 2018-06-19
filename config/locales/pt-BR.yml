@@ -1,2 +1,14 @@
 "pt-BR":
-  hello: "Olá"
+  buttons:
+    edit: "Editar"
+    show: "Ver"
+    destroy: "Apagar"
+    new: "Novo"
+    back: "Voltar"
+    kind: "Nova Categoria"
+  confirmation:
+    messages:
+      sure: "Tem certeza?"
+      editing: "Editando"
+
+

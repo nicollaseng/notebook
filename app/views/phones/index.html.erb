@@ -16,9 +16,9 @@
       <tr>
         <td><%= phone.phone %></td>
         <td><%= phone.contact.name %></td>
-        <td><%= link_to 'Show', phone %></td>
-        <td><%= link_to 'Edit', edit_phone_path(phone) %></td>
-        <td><%= link_to 'Destroy', phone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('buttons.show'),  phone %></td>
+        <td><%= link_to t('buttons.edit'),  edit_phone_path(phone) %></td>
+        <td><%= link_to t('buttons.destroy'), phone, method: :delete, data: { confirm: t('confirmation.messages.sure') } %></td>
       </tr>
     <% end %>
   </tbody>

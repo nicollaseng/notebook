@@ -20,9 +20,9 @@
         <td><%= address.city %></td>
         <td><%= address.state %></td>
         <td><%= address.contact.name %></td>
-        <td><%= link_to 'Show', address %></td>
-        <td><%= link_to 'Edit', edit_address_path(address) %></td>
-        <td><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('buttons.show'),  address %></td>
+        <td><%= link_to t('buttons.edit'),  edit_address_path(address) %></td>
+        <td><%= link_to t('buttons.destroy'), address, method: :delete, data: { confirm: t('confirmation.messages.sure')  } %></td>
       </tr>
     <% end %>
   </tbody>

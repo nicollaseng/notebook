@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2018_06_06_005444) do
   create_table "phones", force: :cascade do |t|
     t.string "phone"
     t.bigint "contact_id"
+    
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["contact_id"], name: "index_phones_on_contact_id"

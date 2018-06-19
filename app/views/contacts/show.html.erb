@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="basic-grey">
 
-<p>
-  <strong>Name:</strong>
-  <%= @contact.name %>
-</p>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @contact.email %>
-</p>
+	<p>
+	  <strong>Name:</strong>
+	  <%= @contact.name %>
+	</p>
 
-<p>
-  <strong>Kind:</strong>
-  <%= @contact.kind.description %>
-</p>
+	<p>
+	  <strong>Email:</strong>
+	  <%= @contact.email %>
+	</p>
 
-<p>
-  <strong>Rmk:</strong>
-  <%= @contact.rmk %>
-</p>
+	<p>
+	  <strong>Kind:</strong>
+	  <%= @contact.kind.description %>
+	</p>
 
-<%= link_to t('buttons.edit'), edit_contact_path(@contact) %> |
-<%= link_to t('buttons.back'), contacts_path %>
+	<p>
+	  <strong>Rmk:</strong>
+	  <%= @contact.rmk %>
+	</p>
+
+	<%= link_to t('buttons.edit'), edit_contact_path(@contact) %> |
+	<%= link_to t('buttons.back'), contacts_path %>
+
+</div>

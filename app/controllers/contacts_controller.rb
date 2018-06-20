@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
-  before_action :chama_Kind, only: [:edit, :new]
+  before_action :chama_Kind, only: [:edit, :new, :create, :update]
 
   # GET /contacts
   # GET /contacts.json

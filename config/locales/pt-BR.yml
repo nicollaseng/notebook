@@ -10,5 +10,6 @@
     messages:
       sure: "Tem certeza?"
       editing: "Editando"
+      error: "erro(s) encontrado em..."
 
 

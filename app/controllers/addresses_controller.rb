@@ -4,7 +4,7 @@ class AddressesController < ApplicationController
   # GET /addresses
   # GET /addresses.json
   def index
-    @addresses = Address.all
+    @addresses = Address.all.order(:street).page(params[:page]).per(15)
   end
 
   # GET /addresses/1

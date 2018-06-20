@@ -4,7 +4,10 @@ class KindsController < ApplicationController
   # GET /kinds
   # GET /kinds.json
   def index
-    @kinds = Kind.all.order(:description).page(params[:page]).per(10)
+    respond_to do |format|
+        format.html { @kinds = Kind.all.order(:description).page(params[:page]).per(10)}
+        format.js {}
+    end  
   end
 
   # GET /kinds/1

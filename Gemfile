@@ -10,6 +10,7 @@ gem 'pry-rails', :group => :development
 gem "cocoon"
 gem 'jquery-rails' 
 gem 'kaminari'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'

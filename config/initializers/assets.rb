@@ -20,4 +20,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
  												    contacts.js,
  												    kinds.js,
  												    phones.js,
- 												    addresses.js)
+ 												    addresses.js,
+ 												    notifyjs/notify.js)

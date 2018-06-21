@@ -1,6 +1,6 @@
 <%= form_with(model: contact, local: true) do |form| %>
   <div class="field">
-    <%= form.label :name %>
+    <p>Nome:</p>
     <%= form.text_field :name %>
   </div>
 
@@ -13,12 +13,12 @@
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <p>Email:</p>
     <%= form.text_field :email %>
   </div>
 
   <div class="field"> 
-    <%= form.label :kind_id %> 
+    <p>Categoria:</p>
     <%= form.collection_select :kind_id, @chamaKind, :id, :description, prompt: '' %>
   </div>
 
@@ -27,13 +27,18 @@
         <%= render partial: "phone_fields", locals: {f: phone_fields}  %>
       <% end %>
   <div class="links">
-     <%= link_to_add_association 'add phone', form, :phones %>
+     <%= link_to_add_association 'Adicionar Telefone', form, :phones, class: "btn btn-outline-success" %>
    </div>
  </div>
 
   <div class="field">
-    <%= form.label :rmk %>
+    <p>Observação:</p>
     <%= form.text_area :rmk %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Foto_perfil%>
+    <%= form.file_field :avatar, class: "btn btn-outline-success" %>
   </div>
 
   <div class="actions">

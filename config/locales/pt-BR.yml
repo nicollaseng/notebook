@@ -9,7 +9,7 @@
   confirmation:
     messages:
       sure: "Tem certeza?"
-      editing: "Editando"
+      editing: "Editar"
       error: "erro(s) encontrado em..."
 
 

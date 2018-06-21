@@ -1,6 +1,11 @@
-<div class="basic-grey">
+<div class="form-style-10">
 
 	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <strong>Perfil:</strong>
+	  <%= image_tag(@contact.avatar.thumb_profile.url, alt: 'Avatar') if @contact.avatar? %>
+	</p>
 
 	<p>
 	  <strong>Name:</strong>

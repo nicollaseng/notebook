@@ -11,6 +11,9 @@ gem "cocoon"
 gem 'jquery-rails' 
 gem 'kaminari'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem "bower-rails", "~> 0.11.0"
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'

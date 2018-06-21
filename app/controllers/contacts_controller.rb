@@ -1,6 +1,7 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
   before_action :chama_Kind, only: [:edit, :new, :create, :update]
+  http_basic_authenticate_with name: "nicollas", password: "99847410", only: :destroy
 
   # GET /contacts
   # GET /contacts.json

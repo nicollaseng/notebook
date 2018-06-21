@@ -6,9 +6,9 @@
 
   <div>
       <%= form.fields_for :address do |address_fields| %>
-      Street: <%= address_fields.text_field :street %>
-      City: <%= address_fields.text_field :city %>
-      State: <%= address_fields.select :state, options_for_states(@contact.address.state) %>
+       <p>Rua:<%= address_fields.text_field :street %></p>
+       <p>Cidade<%= address_fields.text_field :city %></p>
+       <p>Estado:<%= address_fields.select :state, options_for_states(@contact.address.state)%></p>
     <% end %>
   </div>
 
@@ -37,17 +37,17 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Salvar', class: "btn btn-warning"  %>
+    <%= link_to t('buttons.back'), contacts_path, class: "btn btn-warning" %>
   </div>
 <% end %>
-
 <% if contact.errors.any? %>
     <div id="error_explanation">
       <h2><%= "#{pluralize(contact.errors.count, t('confirmation.messages.error'))} " %> </h2>
 
       <ul>
       <% contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li><%= message %></li> 
       <% end %>
       </ul>
     </div>

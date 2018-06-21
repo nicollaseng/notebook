@@ -2,7 +2,9 @@
 
   <p id="notice"><%= notice %></p>
 
-  <h1>Contacts</h1>
+<div class="titulo">
+  <h1>Contatos</h1>
+</div>
 
   <table>
     <thead>
@@ -18,9 +20,8 @@
         <tr style="background: <%= cycle(' #33ffad', '#ffffe6')%>">
           <td><%= contact.name %></td>
           <td><%= contact.kind.description %></td>
-          <td><%= link_to t('buttons.show'), contact %></td>
-          <td><%= link_to t('buttons.edit'), edit_contact_path(contact) %></td>
-          <td><%= link_to t('buttons.destroy'), contact, method: :delete, data: { confirm: t('confirmation.messages.sure') } %></td>
+          <td><%= link_to t('buttons.edit'), edit_contact_path(contact), class: "btn btn-warning" %></td>
+          <td><%= link_to t('buttons.destroy'), contact, class: "btn btn-danger", method: :delete, data: { confirm: t('confirmation.messages.sure') } %></td>
         </tr>
       <% end %>
     </tbody>
@@ -28,7 +29,7 @@
 
   <br>
   <%= paginate @contacts %>
-  <div class="btn btn-secondary">
+  <div class="btn btn-warning">
   <%= link_to t('buttons.new'), new_contact_path,  class: "btn" %>
 </div>
 

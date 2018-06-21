@@ -2,13 +2,10 @@
 
 	<p id="notice"><%= notice %></p>
 
-	<p>
-	  <strong>Perfil:</strong>
-	  <%= image_tag(@contact.avatar.thumb_profile.url, alt: 'Avatar') if @contact.avatar? %>
-	</p>
+	<p><%= image_tag(@contact.avatar.thumb_profile.url, alt: 'Avatar') if @contact.avatar? %></p>
 
 	<p>
-	  <strong>Name:</strong>
+	  <strong>Nome:</strong>
 	  <%= @contact.name %>
 	</p>
 
@@ -18,16 +15,24 @@
 	</p>
 
 	<p>
-	  <strong>Kind:</strong>
+	  <strong>Categoria:</strong>
 	  <%= @contact.kind.description %>
 	</p>
 
 	<p>
-	  <strong>Rmk:</strong>
+	  <strong>Observação:</strong>
 	  <%= @contact.rmk %>
 	</p>
 
-	<%= link_to t('buttons.edit'), edit_contact_path(@contact), class: "btn btn-danger" %> |
+	<p>
+	  <strong>Telefone(s):</strong>
+	  <% @contact.phones.each do |cont| %>
+	  <p><%= cont.phone %></p>
+	  <% end %>
+	</p>
+
+
+	<%= link_to t('buttons.edit'), edit_contact_path(@contact), class: "btn btn-danger" %> 
 	<%= link_to t('buttons.back'), contacts_path, class: "btn btn-warning" %>
 
 </div>

@@ -18,7 +18,6 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
     @contact.build_address
-    @contact.avatar = params[:file]
   end
 
   # GET /contacts/1/edit

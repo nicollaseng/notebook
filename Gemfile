@@ -10,10 +10,11 @@ gem 'pry-rails', :group => :development
 gem "cocoon"
 gem 'jquery-rails' 
 gem 'kaminari'
-gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem "bower-rails", "~> 0.11.0"
 gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'sass-rails', '>= 3.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -22,7 +23,6 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

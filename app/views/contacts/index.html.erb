@@ -28,6 +28,8 @@
 
   <br>
   <%= paginate @contacts %>
-  <%= link_to t('buttons.new'), new_contact_path, class="btn btn-primary" %>
+  <div class="btn btn-secondary">
+  <%= link_to t('buttons.new'), new_contact_path,  class: "btn" %>
+</div>
 
 </div>

@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 .tile .tile-header {
-  background-image: url("https://res.cloudinary.com/dgmilxzy7/image/upload/c_scale,w_500,o_75,b_rgb:07beb8/v1506735375/CodePen/ViddenPixel.jpg");
+  background-image: url('agenda.jpg');
   background-position: center;
   background-size: cover;
   height: 12rem;

@@ -1,29 +1,48 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="tile">
+  <div class="tile-header">
+    <h2 style="color: white; opacity: .75; font-size: 4rem; display: flex; justify-content: center; align-items: center; height: 100%;"></h2>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  
+  <div class="tile-body">
+   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <label class="form-input">
+        <i class="material-icons">person</i>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email"%>
+        <span class="label">Email</span>
+        <span class="underline"></span>
+      </label>
+      <label class="form-input">
+        <i class="material-icons">lock</i>
+        <%= f.password_field :password, autocomplete: "off" %>
+        <span class="label">Senha (min: 6 caracteres)</span>
+        <div class="underline"></div>
+      </label>
+      <label class="form-input">
+        <i class="material-icons">lock</i>
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        <span class="label">Confirmar Senha</span>
+        <div class="underline"></div>
+      </label>
+      <%= render "devise/shared/links" %>
+      <div class="submit-container clearfix" style="margin-top: 2rem;">
+        <%= f.submit "Entrar", class:"btn btn-irenic float-right" %>          
+      </div>
+        
+        <div class="login-pending">
+          <div class=spinner>
+            <span class="dot1"></span>
+            <span class="dot2"></span>
+          </div>
+          
+          <div class="login-granted-content">
+            <i class="material-icons">done</i>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+  
+ 

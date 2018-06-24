@@ -4,6 +4,6 @@ class Contact < ApplicationRecord
   has_many :phones
   accepts_nested_attributes_for :address, allow_destroy: true
   accepts_nested_attributes_for :phones, reject_if: :all_blank, allow_destroy: true
-  validates :name, :email, presence: true
+  validates :name, :avatar, presence: true
   mount_uploader :avatar, AvatarUploader
 end

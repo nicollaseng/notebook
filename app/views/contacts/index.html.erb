@@ -15,13 +15,13 @@
 
     <tbody>
       <% @contacts.each do |contact| %>
-        <tr style="background: <%= cycle('#e6ffff', '#b3fff0')%>">
+        <tr style="background: <%= cycle('#ffff80', 'white')%>">
           <div>
           <td><%= link_to image_tag(contact.avatar.thumb_index.url, alt: 'Avatar'), contact_path(contact) %></td>
           </div>
           <td><%= contact.name %></td>
           <td><%= contact.kind.description %></td>
-          <td><%= link_to t('buttons.edit'), edit_contact_path(contact), class: "btn btn-warning" %></td>
+          <td><%= link_to 'Ver', contact_path(contact), class: "btn btn-success" %></td>
           <td><%= link_to t('buttons.destroy'), contact, class: "btn btn-danger", method: :delete, data: { confirm: t('confirmation.messages.sure') } %></td>
         </tr>
       <% end %>

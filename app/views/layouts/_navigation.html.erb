@@ -7,8 +7,14 @@
     <div class="dropdown-menu">
       <%= link_to 'Novo Contato', new_contact_path,  class:"dropdown-item" %>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="https://github.com/nicollasmatheus">Desenvolvedor</a>
-      <%if user_signed_in?%>
+      <a class="dropdown-item" href="https://github.com/nicollasmatheus">Desenvolvedor</a>    
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Perfil</a>
+    <div class="dropdown-menu">
+       <%if user_signed_in?%>
+          <span>Usuário: <%= current_user.email %></span>
           <%= link_to 'Sair', destroy_user_session_path, method: :delete,  class: "nav-link active" %></a>
       <% end %>
     </div>

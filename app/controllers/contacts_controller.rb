@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json  
   def index
-    @contacts = Contact.all.order(:name).page(params[:page]).per(15) if current_user
+    @contacts = current_user.contacts.all.order(:name).page(params[:page]).per(15) if current_user
   end
 
   # GET /contacts/1
@@ -28,8 +28,7 @@ class ContactsController < ApplicationController
   # POST /contacts
   # POST /contacts.json
   def create
-    @contact = Contact.new(contact_params) if current_user
-
+    @contact = current_user.contacts.new(contact_params) 
     respond_to do |format|
       if @contact.save
         format.html { redirect_to @contact, notice: 'Contact was successfully created.' }

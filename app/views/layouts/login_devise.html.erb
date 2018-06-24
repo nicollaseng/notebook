@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Notebook</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'betterdevise', media: 'all'%>
+    <%= javascript_include_tag 'betterdevise'%>
+  </head>
+
+  <body>
+    <div>
+      <%= yield %>
+    </div>
+  </body>
+</html>

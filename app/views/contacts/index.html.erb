@@ -1,16 +1,4 @@
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <%= link_to 'Home', root_path,  class: "nav-link active" %></a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
-    <div class="dropdown-menu">
-      <%= link_to 'Novo Contato', new_contact_path,  class:"dropdown-item" %>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="https://github.com/nicollasmatheus">Desenvolvedor</a>
-    </div>
-  </li>
-</ul>
+
 
 <div class="form-style-10">
   <p id="notice"><%= notice %></p>
@@ -29,7 +17,7 @@
 
     <tbody>
       <% @contacts.each do |contact| %>
-        <tr style="background: <%= cycle('#ffffb3', '#ffffe6')%>">
+        <tr style="background: <%= cycle('#e6ffff', '#b3fff0')%>">
           <div>
           <td><%= link_to image_tag(contact.avatar.thumb_index.url, alt: 'Avatar'), contact_path(contact) %></td>
           </div>

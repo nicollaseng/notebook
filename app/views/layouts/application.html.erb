@@ -15,6 +15,9 @@
 
   <body>
     <div>
+      <% if user_signed_in? %>
+        <%= render partial: "layouts/navigation" %>
+        <% end %>
       <%= yield %>
     </div>
   </body>

@@ -11,13 +11,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
- Rails.application.config.assets.precompile +=   %w(home.css,
- 													contacts.css,
- 													kinds.css,
- 													phones.css,
- 													addresses.css,
- 												    home.js,
- 												    contacts.js,
- 												    kinds.js,
- 												    phones.js,
- 												    addresses.js)
+ Rails.application.config.assets.precompile += %w(betterdevise.css)
+ Rails.application.config.assets.precompile += %w(betterdevise.js)

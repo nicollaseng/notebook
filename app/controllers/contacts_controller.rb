@@ -1,12 +1,13 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
   before_action :chama_Kind, only: [:edit, :new, :create, :update]
-  http_basic_authenticate_with name: "nicollas", password: "99847410", only: :destroy
+  
+ 
 
   # GET /contacts
-  # GET /contacts.json
+  # GET /contacts.json  
   def index
-    @contacts = Contact.all.order(:name).page(params[:page]).per(15)
+    @contacts = Contact.all.order(:name).page(params[:page]).per(15) if current_user
   end
 
   # GET /contacts/1
@@ -27,7 +28,7 @@ class ContactsController < ApplicationController
   # POST /contacts
   # POST /contacts.json
   def create
-    @contact = Contact.new(contact_params)
+    @contact = Contact.new(contact_params) if current_user
 
     respond_to do |format|
       if @contact.save

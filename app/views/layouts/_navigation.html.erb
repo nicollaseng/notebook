@@ -1,23 +1,25 @@
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <%= link_to 'Home', root_path,  class: "nav-link active" %></a>
+    <%= link_to 'Home', root_path,  class: "nav-link active" %>
   </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
-    <div class="dropdown-menu">
-      <%= link_to 'Novo Contato', new_contact_path,  class:"dropdown-item" %>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="https://github.com/nicollasmatheus">Desenvolvedor</a>    
-    </div>
+  <li class="nav-item">
+    <%= link_to 'Novo Contato', new_contact_path,  class: "nav-link active" %>
   </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Perfil</a>
-    <div class="dropdown-menu">
-       <%if user_signed_in?%>
-          <span>Usuário: <%= current_user.email %></span>
-          <%= link_to 'Sair', destroy_user_session_path, method: :delete,  class: "nav-link active" %></a>
+  <li class="nav-item">
+   <a  class= "nav-link active"  href="https://github.com/nicollasmatheus">Desenvolvedor</a>   
+  </li>
+  <li class="nav-item">
+    <%if user_signed_in?%>
+        
+          <a><%= link_to 'Sair', destroy_user_session_path, method: :delete,  class: "btn btn-warning" %></a>
       <% end %>
-    </div>
+  </li>
+
+  <li class="nav-item dropdown">
+   
+  </li>
+  <li class="nav-item dropdown">
+    
   </li>
 </ul>
 

@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json  
   def index
-    @contacts = current_user.contacts.all.order(:name).page(params[:page]).per(15) if current_user
+    @contacts = current_user.contacts.all.order(:name).page(params[:page]).per(15) 
   end
 
   # GET /contacts/1

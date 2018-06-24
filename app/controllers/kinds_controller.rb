@@ -6,7 +6,7 @@ class KindsController < ApplicationController
   # GET /kinds.json
   def index
     respond_to do |format|
-        format.html { @kinds = Kind.all.order(:description).page(params[:page]).per(10)}
+        format.html { @kinds = current_user.kinds.all.order(:description).page(params[:page]).per(10)}
         format.js {}
     end  
   end
